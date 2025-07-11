@@ -1,6 +1,6 @@
 import BookList from '@/components/BookList'
 import BookOverview from '@/components/BookOverview'
-import { sampleBooks } from '@/components/constants'
+import { sampleBooks } from '@/constants'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 
