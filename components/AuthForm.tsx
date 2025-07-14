@@ -43,7 +43,9 @@ const AuthForm = <T extends FieldValues>({
 
   const isSignIn = type === "SIGN_IN";
 
+  // @ts-ignore
   const form: UseFormReturn<T> = useForm({
+    // @ts-ignore
     resolver: zodResolver(schema),
     defaultValues: defaultValues as DefaultValues<T>,
   });
@@ -96,7 +98,7 @@ const AuthForm = <T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     {field.name === "universityCard" ? (
-                      <FileUpload/>
+                      <FileUpload onFileChange={field.onChange} />
                     ) : (
                       <Input
                         required
